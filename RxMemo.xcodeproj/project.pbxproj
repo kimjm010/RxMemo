@@ -15,6 +15,8 @@
 		F518C6E228C5EC3600C4F2F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F518C6E128C5EC3600C4F2F7 /* Assets.xcassets */; };
 		F518C6E528C5EC3600C4F2F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F518C6E328C5EC3600C4F2F7 /* LaunchScreen.storyboard */; };
 		F544649528C5EFDE00198135 /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F544649428C5EFDE00198135 /* Memo.swift */; };
+		F544649728C5F0F700198135 /* MemoStorageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F544649628C5F0F700198135 /* MemoStorageType.swift */; };
+		F544649B28C5F1A800198135 /* MemoryStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F544649A28C5F1A800198135 /* MemoryStorage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		F518C6E428C5EC3600C4F2F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F518C6E628C5EC3600C4F2F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F544649428C5EFDE00198135 /* Memo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memo.swift; sourceTree = "<group>"; };
+		F544649628C5F0F700198135 /* MemoStorageType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoStorageType.swift; sourceTree = "<group>"; };
+		F544649A28C5F1A800198135 /* MemoryStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryStorage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,10 +94,7 @@
 				F518C6D528C5EC3500C4F2F7 /* AppDelegate.swift */,
 				F518C6D728C5EC3500C4F2F7 /* SceneDelegate.swift */,
 				F518C6E128C5EC3600C4F2F7 /* Assets.xcassets */,
-				F518C6DB28C5EC3500C4F2F7 /* Main.storyboard */,
-				F518C6E328C5EC3600C4F2F7 /* LaunchScreen.storyboard */,
 				F518C6E628C5EC3600C4F2F7 /* Info.plist */,
-				F518C6DE28C5EC3500C4F2F7 /* RxMemo.xcdatamodeld */,
 			);
 			path = RxMemo;
 			sourceTree = "<group>";
@@ -109,6 +110,8 @@
 		F544649028C5EEE200198135 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				F518C6DB28C5EC3500C4F2F7 /* Main.storyboard */,
+				F518C6E328C5EC3600C4F2F7 /* LaunchScreen.storyboard */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -123,6 +126,9 @@
 		F544649228C5EEEA00198135 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				F544649928C5F18400198135 /* CoreDataStorage */,
+				F544649828C5F17B00198135 /* MemoryStorage */,
+				F544649628C5F0F700198135 /* MemoStorageType.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -132,6 +138,22 @@
 			children = (
 			);
 			path = Scene;
+			sourceTree = "<group>";
+		};
+		F544649828C5F17B00198135 /* MemoryStorage */ = {
+			isa = PBXGroup;
+			children = (
+				F544649A28C5F1A800198135 /* MemoryStorage.swift */,
+			);
+			path = MemoryStorage;
+			sourceTree = "<group>";
+		};
+		F544649928C5F18400198135 /* CoreDataStorage */ = {
+			isa = PBXGroup;
+			children = (
+				F518C6DE28C5EC3500C4F2F7 /* RxMemo.xcdatamodeld */,
+			);
+			path = CoreDataStorage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,7 +271,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F544649B28C5F1A800198135 /* MemoryStorage.swift in Sources */,
 				F518C6D628C5EC3500C4F2F7 /* AppDelegate.swift in Sources */,
+				F544649728C5F0F700198135 /* MemoStorageType.swift in Sources */,
 				F518C6D828C5EC3500C4F2F7 /* SceneDelegate.swift in Sources */,
 				F518C6E028C5EC3500C4F2F7 /* RxMemo.xcdatamodeld in Sources */,
 				F544649528C5EFDE00198135 /* Memo.swift in Sources */,
