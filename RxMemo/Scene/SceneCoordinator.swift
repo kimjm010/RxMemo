@@ -73,7 +73,7 @@ class SceneCoordinator: SceneCoordinatorType {
         return Completable.create { [unowned self] completable in
             
             // 현재 scene이 모달 방식으로 되어있으면 dismiss하기
-            if let presentingVC = self.currentVC.presentedViewController {
+            if let presentingVC = self.currentVC.presentingViewController {
                 self.currentVC.dismiss(animated: animated) {
                     self.currentVC = presentingVC
                     completable(.completed)
