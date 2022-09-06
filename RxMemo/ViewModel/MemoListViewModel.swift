@@ -8,6 +8,7 @@
 import Foundation
 import RxSwift
 import RxCocoa
+import Action
 
 
 // 메모 목록화면에서 사용하는 ViewModel
@@ -17,7 +18,41 @@ import RxCocoa
 // ViewModel 생성 시점에 initializer를통해 의존성을 주입해야함
 // => 효율적인 처리를 위한 CommonViewModel 클래스 생성
 class MemoListViewModel: CommonViewModel {
+    
     var memoList: Observable<[Memo]> {
         return storage.memoList()
+    }
+    
+    func makeCreateAction() -> CocoaAction {
+        return CocoaAction { _ in
+            
+            // createMemo를 호출하면 새로운메모가 만들어지고 이 메모를 방출하는 Observable이 리턴됨
+            return self.storage.createMemo(content: "")
+                .flatMap { memo -> Observable<Void> in
+                    // 여기서 화면전화을 처리
+                    
+                    let composeViewModel = MemoComposeViewModel(title: "새 메모", sceneCoordinator: self.sceneCoordinator, storage: self.storage, saveAction: self.performUpdate(memo: memo), cancelAction: self.performCancel(memo: memo))
+                    
+                    let composeScene = Scene.compose(composeViewModel)
+                    
+                    return self.sceneCoordinator.transition(to: composeScene, using: .modal, animated: true)
+                        .asObservable()
+                        .map { _ in }
+                }
+        }
+    }
+    
+    
+    func performUpdate(memo: Memo) -> Action<String, Void> {
+        return Action { input in
+            return self.storage.update(memo: memo, content: input).map { _ in }
+        }
+    }
+    
+    
+    func performCancel(memo: Memo) -> CocoaAction {
+        return Action {
+            return self.storage.delete(memo: memo).map { _ in }
+        }
     }
 }

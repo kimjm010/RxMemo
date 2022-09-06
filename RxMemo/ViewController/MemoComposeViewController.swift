@@ -20,11 +20,12 @@ class MemoComposeViewController: UIViewController, ViewModelBindableType {
     @IBOutlet weak var contentTextView: UITextView!
     
     
-    
     // MARK: - Vars
     
     var viewModel: MemoComposeViewModel!
     
+    
+    // MARK: - Bind ViewModel to View
     
     func bindViewModel() {
         
