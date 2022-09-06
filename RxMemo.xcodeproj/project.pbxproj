@@ -28,6 +28,7 @@
 		F5A9818628C6E26200C14412 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A9818528C6E26200C14412 /* Scene.swift */; };
 		F5A9818828C6E48700C14412 /* SceneCoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A9818728C6E48700C14412 /* SceneCoordinatorType.swift */; };
 		F5A9818A28C6E52D00C14412 /* SceneCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A9818928C6E52D00C14412 /* SceneCoordinator.swift */; };
+		F5A9819428C7096100C14412 /* CommonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A9819328C7096100C14412 /* CommonViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		F5A9818528C6E26200C14412 /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
 		F5A9818728C6E48700C14412 /* SceneCoordinatorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneCoordinatorType.swift; sourceTree = "<group>"; };
 		F5A9818928C6E52D00C14412 /* SceneCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneCoordinator.swift; sourceTree = "<group>"; };
+		F5A9819328C7096100C14412 /* CommonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +146,7 @@
 		F544649128C5EEE700198135 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				F5A9819328C7096100C14412 /* CommonViewModel.swift */,
 				F5A9816D28C6D60900C14412 /* MemoListViewModel.swift */,
 				F5A9816F28C6D63500C14412 /* MemoDetailViewModel.swift */,
 				F5A9817128C6D64D00C14412 /* MemoComposeViewModel.swift */,
@@ -317,6 +320,7 @@
 				F5A9818828C6E48700C14412 /* SceneCoordinatorType.swift in Sources */,
 				F5A9816E28C6D60900C14412 /* MemoListViewModel.swift in Sources */,
 				F5A9817028C6D63500C14412 /* MemoDetailViewModel.swift in Sources */,
+				F5A9819428C7096100C14412 /* CommonViewModel.swift in Sources */,
 				F5A9818428C6E20200C14412 /* TransitionModel.swift in Sources */,
 				F5A9816828C6D3B100C14412 /* MemoListViewController.swift in Sources */,
 				F5A9816C28C6D5BE00C14412 /* MemoComposeViewController.swift in Sources */,
