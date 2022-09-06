@@ -35,7 +35,10 @@ extension Scene {
                 fatalError()
             }
             
-            listVC.bind(viewModel: memoListViewModel)
+            DispatchQueue.main.async {
+                listVC.bind(viewModel: memoListViewModel)
+            }
+            
             
             // Navigation Controller를 리턴해야 Nav Bar, Nav Stack이 정상적으로 동작함
             return nav
@@ -46,7 +49,9 @@ extension Scene {
                 fatalError()
             }
             
-            deatilVC.bind(viewModel: memoDetailViewModel)
+            DispatchQueue.main.async {
+                deatilVC.bind(viewModel: memoDetailViewModel)
+            }
             
             return deatilVC
             
@@ -58,7 +63,9 @@ extension Scene {
                 fatalError()
             }
             
-            composeVC.bind(viewModel: memoComposeViewModel)
+            DispatchQueue.main.async {
+                composeVC.bind(viewModel: memoComposeViewModel)
+            }
             
             return nav
         }

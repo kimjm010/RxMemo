@@ -29,6 +29,7 @@ class SceneCoordinator: SceneCoordinatorType {
         // 화면전환 결과를 방출할 subject
         let subject = PublishSubject<Never>()
         
+        // 실제 scene을 생성
         let target = scene.instantiate()
         
         switch style {
