@@ -8,9 +8,9 @@
 import Foundation
 import RxSwift
 
+
 // 메모리에 메모를 저장하는 클래스
 class MemoryStorage: MemoStorageType {
-    
     
     // 클래스 외부에서 배열에 직접 접근할 필요가 없어 private으로 선언
     // 배열은 Observable을 통해 외부로 공개됨
