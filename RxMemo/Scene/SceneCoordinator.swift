@@ -11,6 +11,7 @@ import RxCocoa
 
 
 
+
 extension UIViewController {
     var sceneViewController: UIViewController {
         return self.children.last ?? self
@@ -51,8 +52,6 @@ class SceneCoordinator: SceneCoordinatorType {
             subject.onCompleted()
             
         case .push:
-            
-            print(currentVC)
             
             guard let nav = currentVC.navigationController else {
                 subject.onError(TransitionError.navigationControllerMissing)
