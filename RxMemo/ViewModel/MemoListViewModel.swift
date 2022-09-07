@@ -45,7 +45,9 @@ class MemoListViewModel: CommonViewModel {
     
     func performUpdate(memo: Memo) -> Action<String, Void> {
         return Action { input in
-            return self.storage.update(memo: memo, content: input).map { _ in }
+            return self.storage.update(memo: memo, content: input)
+                .debug()
+                .map { _ in }
         }
     }
     
